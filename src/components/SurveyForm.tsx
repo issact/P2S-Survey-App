@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { useForm } from 'react-hook-form';
 import InfoIcon from "@/components/icons/info-icon";
-import { FormProps } from '@/lib/types';
+import { SurveyFormProps } from '@/lib/types';
 import { Button } from '@/components/ui/button';
 import { Progress } from '@/components/ui/progress';
 
@@ -52,7 +52,7 @@ type SessionData = {
 }
 
 // Main Survey Form Component
-const SurveyForm: React.FC<FormProps> = ({ onBack }) => {
+const SurveyForm: React.FC<SurveyFormProps> = ({ onBack }) => {
   const [currentSession, setCurrentSession] = useState(0);
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [progress, setProgress] = useState(0);

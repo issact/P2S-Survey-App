@@ -13,7 +13,7 @@ export default function Home() {
     <div>
       {/* Hero Content */}
       <div className="container mx-auto z-50 relative">
-        <div className="flex justify-between gap-8 items-center">
+        <div className="flex flex-col lg:flex-row justify-between gap-8 items-center">
           {/* Left Column */}
           <div className="flex flex-col justify-between h-full w-7/12 gap-20 py-24">
             <div className="space-y-10">
@@ -25,7 +25,7 @@ export default function Home() {
             <p className="text-xl text-[#B4C4D1]">We invite you to take our brief AI Strategy Efficiancy Survey.</p>
           </div>
             <div className="relative inline-block">
-            <ShimmerLink className="shadow-2xl bg-gradient1" href="/survey-form" borderRadius="8px">
+            <ShimmerLink className="shadow-2xl bg-gradient1" href="/login" borderRadius="8px">
       <span className="whitespace-pre-wrap text-center font-medium leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg uppercase text-lg px-6">
       Start the survey
       </span>

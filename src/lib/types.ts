@@ -1,4 +1,5 @@
 export interface FormData {
+  email: string;
   orgname: string;
   industry: string;
   revenue: string;
@@ -10,10 +11,22 @@ export interface FormData {
   acceptTerms: boolean;
 }
 
-export interface FormProps {
+export interface GeneralFormProps {
   //onNext?: (data: FormData) => void;
   onNext: () => void;
+  onSkip: () => void;
+}
+
+export interface LoginFormProps {
+  onNext: () => void;
+}
+
+export interface SurveyFormProps {
   onBack: () => void;
+}
+
+export interface HomeProps {
+  onStart: () => void;
 }
 
 export type Option = {

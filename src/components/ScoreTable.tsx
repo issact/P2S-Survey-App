@@ -17,6 +17,14 @@ import {
 import CardBlurry from './ui/card-blurry';
 import { AiEfficiencyScore } from './RadarChart';
 
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "@/components/ui/collapsible"
+import { PlusCircleIcon } from 'lucide-react';
+
+
 const ScoreTable = () => {
 
   return (
@@ -35,7 +43,7 @@ const ScoreTable = () => {
           <TableHeader className='bg-[#051B2C]'>
             <TableRow>
               <TableHead className='text-[#E7ECF0] text-center'>#</TableHead>
-              <TableHead className='text-[#E7ECF0] text-center'>Variables</TableHead>
+              <TableHead className='text-[#E7ECF0] text-left'>Variables</TableHead>
               <TableHead className='text-[#E7ECF0] text-center'>Organisation Score</TableHead>
               <TableHead className='text-[#E7ECF0] text-center'>Market Benchmark Score</TableHead>
             </TableRow>
@@ -43,31 +51,42 @@ const ScoreTable = () => {
           <TableBody>
           <TableRow className='text-white'>
                   <TableCell>1</TableCell>
-                  <TableCell>Strategy and governance</TableCell>
+                  <TableCell className='text-left relative'>
+                    Strategy and governance
+                  <Collapsible>
+                  <CollapsibleTrigger><PlusCircleIcon className='absolute top-5 right-2'/></CollapsibleTrigger>
+                  <CollapsibleContent className='flex flex-wrap gap-2'>
+                  <span className='bg-[#B4C4D1] rounded text-white px-2 py-1'>option 1</span> <span className='bg-[#B4C4D1] rounded text-white px-2 py-1'>option 2</span>
+                  <span className='bg-[#B4C4D1] rounded text-white px-2 py-1'>option 3</span><span className='bg-[#B4C4D1] rounded text-white px-2 py-1'>option 4</span>
+                  <span className='bg-[#B4C4D1] rounded text-white px-2 py-1'>option 5</span>
+                  </CollapsibleContent>
+                  </Collapsible>
+
+                  </TableCell>
                   <TableCell>2.8</TableCell>
                   <TableCell>3.0</TableCell>
                 </TableRow>
                 <TableRow className='text-white'>
                   <TableCell>2</TableCell>
-                  <TableCell>AI foundations</TableCell>
+                  <TableCell className='text-left'>AI foundations</TableCell>
                   <TableCell>2.8</TableCell>
                   <TableCell>3.0</TableCell>
                 </TableRow>
                 <TableRow className='text-white'>
                   <TableCell>3</TableCell>
-                  <TableCell>AI metrics</TableCell>
+                  <TableCell className='text-left'>AI metrics</TableCell>
                   <TableCell>2.8</TableCell>
                   <TableCell>3.0</TableCell>
                 </TableRow>
                 <TableRow className='text-white'>
                   <TableCell>4</TableCell>
-                  <TableCell>AI currency</TableCell>
+                  <TableCell className='text-left'>AI currency</TableCell>
                   <TableCell>2.8</TableCell>
                   <TableCell>3.0</TableCell>
                 </TableRow>
                 <TableRow className='text-white'>
                   <TableCell>5</TableCell>
-                  <TableCell>AI change management</TableCell>
+                  <TableCell className='text-left'>AI change management</TableCell>
                   <TableCell>2.8</TableCell>
                   <TableCell>3.0</TableCell>
                 </TableRow>

@@ -21,12 +21,12 @@ import {
   FormLabel,
   FormMessage,
 } from '@/components/ui/form';
-import type { FormData, FormProps } from '@/lib/types';
+import type { FormData, GeneralFormProps } from '@/lib/types';
 import Link from 'next/link';
 
 
 
-const GeneralInformationForm: React.FC<FormProps> = ({ onNext }) => {
+const GeneralInformationForm: React.FC<GeneralFormProps> = ({ onNext, onSkip }) => {
   const form = useForm<FormData>({
     defaultValues: {
       orgname: '',
@@ -196,7 +196,8 @@ const GeneralInformationForm: React.FC<FormProps> = ({ onNext }) => {
               )}
             />
 
-            <div className="flex justify-end">
+            <div className="flex justify-between">
+            <Button type="submit" onClick={onSkip} className='bg-[#B4C4D1] text-base px-6 py-3 hover:bg-none hover:shadow-xl border-none hover:bg-[#5C7F9B] hover:text-white'>Skip</Button>
               <Button type="submit" className='bg-gradient1 text-base px-6 py-3 hover:bg-none hover:bg-primary hover:shadow-xl'>NEXT</Button>
             </div>
           </form>
